@@ -819,7 +819,6 @@ address li {
   .callback-form-custom-checkbox {
   background-color: var(--hover-color);
   border: none;
-  outline: none;
   fill: var(--light-text-color);
 }
 
