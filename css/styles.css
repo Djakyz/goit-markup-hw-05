@@ -680,12 +680,11 @@ address li {
   align-items: center;
   justify-content: center;
   position: absolute;
-  fill: var(--secondary-color);
   top: 24px;
   right: 24px;
   line-height: 0;
   transition: background-color var(--primary-transition),
-    border var(--primary-transition), fill var(--primary-transition);
+    border var(--primary-transition);
 }
 
 .close-modal-btn:hover,
@@ -700,10 +699,10 @@ address li {
   transition: fill var(--primary-transition);
 }
 
-.close-modal-btn-icon:hover,
+/* .close-modal-btn-icon:hover,
 .close-modal-btn-icon:focus {
   fill: #ffffff;
-}
+} */
 
 .callback-slogan {
   font-weight: 500;
