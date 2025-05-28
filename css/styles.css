@@ -691,10 +691,12 @@ address li {
 .close-modal-btn:focus {
   background-color: var(--hover-color);
   border: none;
+}
+
+.close-modal-btn:hover > .close-modal-btn-icon {
   fill: #ffffff;
 }
 
-.close-modal-btn:hover,
 .close-modal-btn:focus > .close-modal-btn-icon {
   fill: #ffffff;
 }
