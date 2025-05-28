@@ -691,16 +691,11 @@ address li {
 .close-modal-btn:focus {
   background-color: var(--hover-color);
   border: none;
+  fill: var(--white-color);
 }
 
 .close-modal-btn-icon {
   fill: var(--secondary-color);
-  transition: fill var(--primary-transition);
-}
-
-.close-modal-btn-icon:hover,
-.close-modal-btn-icon:focus {
-  fill: var(--white-color);
 }
 
 .callback-slogan {
