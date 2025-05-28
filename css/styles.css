@@ -696,6 +696,12 @@ address li {
 
 .close-modal-btn-icon {
   fill: var(--secondary-color);
+  transition: fill var(--primary-transition);
+}
+
+.close-modal-btn-icon:hover,
+.close-modal-btn-icon:focus {
+  fill: var(--white-color);
 }
 
 .callback-slogan {
@@ -827,12 +833,6 @@ address li {
   color: var(--accent-color);
   text-decoration: underline;
 }
-
-/* .callback-form-submit-button-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .callback-form-submit-btn {
   display: block;
