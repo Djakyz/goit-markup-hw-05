@@ -826,6 +826,14 @@ address li {
   + .callback-form-checkbox-label
   .callback-form-custom-checkbox {
   border: 1px solid var(--accent-color);
+  fill: var(--white-color);
+}
+
+.callback-form-policy-checkbox:hover
+  + .callback-form-checkbox-label
+  .callback-form-custom-checkbox {
+  border: 1px solid var(--accent-color);
+  fill: var(--white-color);
 }
 
 .privacy-policy-link {
