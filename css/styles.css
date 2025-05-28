@@ -576,10 +576,6 @@ address li {
   gap: 24px;
 }
 
-.footer-subscribe-input-wrapper {
-  display: inline-flex;
-}
-
 .footer-subscribe-input {
   border: 1px solid var(--white-color);
   background-color: transparent;
