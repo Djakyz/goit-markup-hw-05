@@ -642,12 +642,15 @@ address li {
   height: 100%;
   background: rgba(46, 47, 66, 0.4);
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transition: opacity var(--primary-transition);
+  transition: opacity var(--primary-transition),
+    visibility var(--primary-transition);
 }
 
 .modal-overlay.is-open {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 
@@ -660,9 +663,11 @@ address li {
     0 2px 1px 0 rgba(0, 0, 0, 0.2);
   background: #fcfcfc;
   border-radius: 4px;
-  max-width: 408px;
-  padding: 24px;
+  width: 408px;
+  min-height: 584px;
+  padding: 72px 24px 24px 24px;
   overflow-y: auto;
+  transition: transform var(--primary-transition);
 }
 
 .close-modal-btn {
@@ -670,20 +675,31 @@ address li {
   height: 24px;
   background-color: #e7e9fc;
   border: 1px solid #0000001a;
-  border-radius: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   top: 24px;
   right: 24px;
-  fill: var(--secondary-color);
   line-height: 0;
   transition: background-color var(--primary-transition),
-    border var(--primary-transition), fill var(--primary-transition);
+    border var(--primary-transition);
 }
 
 .close-modal-btn:hover,
 .close-modal-btn:focus {
   background-color: var(--hover-color);
   border: none;
+}
+
+.close-modal-btn-icon {
+  fill: var(--secondary-color);
+  transition: fill var(--primary-transition);
+}
+
+.close-modal-btn-icon:hover,
+.close-modal-btn-icon:focus {
   fill: var(--white-color);
 }
 
@@ -694,7 +710,6 @@ address li {
   text-align: center;
   color: var(--secondary-color);
   margin-bottom: 16px;
-  padding-top: 54px;
 }
 
 .callback-form-field-wrapper {
@@ -705,7 +720,7 @@ address li {
   display: block;
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
   margin-bottom: 4px;
@@ -743,9 +758,17 @@ address li {
   fill: var(--accent-color);
 }
 
+.textarea {
+  margin-bottom: 16px;
+}
+
 .callback-form-message {
   width: 100%;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
@@ -760,10 +783,6 @@ address li {
 }
 
 .callback-form-message::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
 
@@ -774,7 +793,7 @@ address li {
 .callback-form-checkbox-label {
   font-weight: 400;
   font-size: 12px;
-  line-height: 1.2;
+  line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
@@ -790,15 +809,17 @@ address li {
   cursor: pointer;
   fill: transparent;
   margin-right: 8px;
+  transition: background-color var(--primary-transition),
+    border var(--primary-transition), fill var(--primary-transition);
 }
 
 .callback-form-policy-checkbox:checked
   + .callback-form-checkbox-label
   .callback-form-custom-checkbox {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
+  background-color: var(--hover-color);
+  border: none;
   outline: none;
-  fill: #ffffff;
+  fill: var(--light-text-color);
 }
 
 .callback-form-policy-checkbox:focus
@@ -812,14 +833,16 @@ address li {
   text-decoration: underline;
 }
 
-.callback-form-submit-button-wrapper {
+/* .callback-form-submit-button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .callback-form-submit-btn {
+  display: block;
   min-width: 169px;
+  height: 56px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -831,6 +854,9 @@ address li {
   transition: background-color var(--primary-transition);
   border-radius: 4px;
   padding: 16px 32px;
+  cursor: pointer;
+  border: none;
+  margin: 0 auto;
 }
 
 .callback-form-submit-btn:hover,

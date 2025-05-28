@@ -444,7 +444,7 @@
               <input
                 class="footer-subscribe-input"
                 id="footer_subscribe_field"
-                name="footer_subscribe_user_email"
+                name="footer-subscribe-user-email"
                 type="email"
                 placeholder="E-mail"
               />
@@ -473,16 +473,14 @@
         </p>
         <form class="callback-form">
           <div class="callback-form-field-wrapper">
-            <label
-              class="callback-form-field-label"
-              for="callback-form-username"
+            <label class="callback-form-field-label" for="user-name"
               >Name</label
             >
             <div class="callback-form-field-content-wrapper">
               <input
                 class="callback-form-input"
-                id="callback-form-username"
-                name="username"
+                id="user-name"
+                name="user-name"
                 type="text"
                 required
               />
@@ -528,32 +526,31 @@
             </div>
           </div>
 
-          <div class="callback-form-field-wrapper">
-            <label class="callback-form-field-label" for="callback-form-message"
+          <div class="callback-form-field-wrapper textarea">
+            <label class="callback-form-field-label" for="user-comment"
               >Comment</label
             >
             <textarea
               class="callback-form-message"
-              id="callback-form-message"
-              name="user_comment"
+              id="user-comment"
+              name="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
           <div class="callback-form-checkbox-wrapper">
             <input
               class="callback-form-policy-checkbox visually-hidden"
-              id="callback-form-privacy-checkbox"
+              id="user-privacy"
               type="checkbox"
+              name="user-privacy"
+              value="true"
             />
-            <label
-              class="callback-form-checkbox-label"
-              for="callback-form-privacy-checkbox"
-            >
+            <label class="callback-form-checkbox-label" for="user-privacy">
               <span class="callback-form-custom-checkbox">
                 <svg
                   class="callback-form-custom-checkbox-icon"
                   width="10"
-                  height="10"
+                  height="8"
                 >
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
@@ -562,9 +559,8 @@
               <a class="privacy-policy-link" href="">Privacy Policy</a>
             </label>
           </div>
-          <div class="callback-form-submit-button-wrapper">
-            <button class="callback-form-submit-btn" type="submit">Send</button>
-          </div>
+
+          <button class="callback-form-submit-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
