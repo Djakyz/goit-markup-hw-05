@@ -478,7 +478,6 @@ address li {
 .footer {
   padding-top: 100px;
   padding-bottom: 100px;
-  padding-left: 27px;
   display: flex;
   align-items: baseline;
 }
