@@ -685,7 +685,7 @@ address li {
   right: 24px;
   line-height: 0;
   transition: background-color var(--primary-transition),
-    border var(--primary-transition);
+    border var(--primary-transition), fill var(--primary-transition);
 }
 
 .close-modal-btn:hover,
