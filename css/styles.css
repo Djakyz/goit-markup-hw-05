@@ -571,6 +571,11 @@ address li {
   margin-bottom: 16px;
 }
 
+.footer-subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+
 .footer-subscribe-input-wrapper {
   display: inline-flex;
 }
@@ -583,16 +588,16 @@ address li {
   height: 40px;
   transition: border-color var(--primary-transition);
   outline: transparent;
-  padding: 8px 16px;
   color: var(--white-color);
-  margin-right: 24px;
-}
-
-.footer-subscribe-input::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
+  letter-spacing: 0.04em;
+  padding-left: 16px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.footer-subscribe-input::placeholder {
   color: var(--white-color);
 }
 
@@ -607,11 +612,17 @@ address li {
   column-gap: 16px;
   border-radius: 4px;
   padding: 8px 24px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   background-color: var(--accent-color);
   transition: background-color var(--primary-transition);
   color: var(--white-color);
+  font-style: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: none;
 }
 
 .fotter-subscribe-button:hover,
@@ -621,6 +632,7 @@ address li {
 
 .footer-subsribe-btn-icon {
   fill: var(--white-color);
+  margin-left: 16px;
 }
 
 /* MODAL STYLES */
